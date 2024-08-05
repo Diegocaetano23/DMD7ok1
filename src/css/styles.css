@@ -8,7 +8,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    padding-top: 120px; /* Ajuste este valor para a altura do seu menu */
+    padding-top: 100px;
 }
 
     /** TOPNAV COM LOGO, LINKS E DROPDOWN **/
@@ -241,6 +241,7 @@ body {
         align-items: center;
         padding: 20px;
         flex-wrap: wrap;
+        
     }
 
     .services img {
@@ -376,7 +377,7 @@ body {
 
     .half-image {
         width: 100%;
-        margin-bottom: 20px;
+     
     }
 
     .half-list {
@@ -420,23 +421,6 @@ body {
    text-align: center;
 }
 
-/* TITULO SMALL SCREEN */
-/* Estilo padrão - ocultar título em telas maiores */
-/* Estilo padrão - ocultar título em telas menores */
-.title-small-screen {
-    display: none; /* Oculta por padrão */
-}
-
-@media (min-width: 768px) {
-    .title-small-screen {
-        display: block; /* Exibe o título em telas maiores que 768px */
-    }
-}
-
-
-/* Restante do CSS */
-
-/* END TÍTULO SMALL SCREEN */
 
 
 /* INÍCIO WHO */
@@ -653,7 +637,7 @@ html {
 }
 
 .right-side .logowhite {
-    max-width: 100%;
+    max-width: 250px;
     height: auto;
     margin-bottom: 20px;
 }
@@ -667,5 +651,285 @@ html {
     
     .left-side, .right-side {
         width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .left-side {
+        width: 50%;
+        color: white;
+        padding: 80px;
+    }
+     
+}
+
+    .left-side h2{
+
+        font-size: 35px;
+    }
+
+    .left-side p {
+        font-size: 20px;
+    }
+    
+
+    /* ADICIONADO AGORA  PARA AJUSTAR 768PX E 1024PX, DEIXAR O BOTAO E O LOGO NO LADO DIREITO TBM.*/
+    /* CONTÉM REPETIÇÕES MAS OK, FOI ADICIONADO PARA REGULAR A 768 EM TER O LOGOWHITE E BOTAO AO LADO DIREITO TBM IGUAL JA ESTAVA EM 1024*/
+
+.div1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.div1 .left-side {
+    margin-bottom: 20px;
+}
+
+.div1 .right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div1 .logowhite {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.btn-orcamento {
+    background-color: #FFA500;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-orcamento:hover {
+    background-color: #FF8C00;
+}
+
+.half {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.half-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.half-image {
+    width: 100%;
+}
+
+.half-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    max-width: 500px;
+}
+
+.half-list .title-small-screen {
+    display: none;
+}
+
+.half-list li {
+    margin: 10px 0;
+}
+
+.half-list i {
+    color: #FFA500;
+    margin-right: 10px;
+}
+
+.fix-center {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+
+
+@media (min-width: 768px) {
+    .div1 {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .div1 .left-side,
+    .div1 .right-side {
+        flex: 1;
+    }
+
+    .half {
+        flex-direction: row;
+    }
+
+    .half-content {
+        flex-direction: row;
+    }
+
+    .half-image {
+        width: 50%;
+    }
+
+    .half-list {
+        max-width: 50%;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+
+    .half-content {
+        flex-direction: column;
+    }
+
+    .half-image {
+        display: none;
+    }
+
+    .half-list .title-small-screen {
+        display: block;
+    }
+
+}
+
+/*END ADICIONADO AGORA PARA AJUSTAR O MEIO A MEIO*/
+
+/* INICIO DE: AJUSTE DE BACKGROUND , TELA GRANDE E PEQUENA */
+
+
+
+/* styles.css */
+
+/* Estilo padrão para telas acima de 600px */
+.div1 {
+    background-image: url('./img/background1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0px;
+    width: 100%;
+}
+
+/* Estilo para telas abaixo de 600px */
+@media (max-width: 600px) {
+    .div1 {
+        background-image: url('./img/background-small1.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 800px;
+    }
+
+    .logo img {
+        height: 80px;
+        margin-left: -15px;
+    }
+
+
+}
+
+@media (max-width: 425px) {
+
+    .div1{
+        height: 610px;
+    }
+
+    .div1 h2{
+        padding: 0;
+        font-size: 27px;
+  
+    }
+
+    .div1 .btn-orcamento{
+        margin-top: -35px;
+    }
+    
+    .div1 p{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+
+}
+
+@media (max-width: 375px) {
+
+    .div1{
+        height: 610px;
+    }
+
+    .div1 h2{
+        padding: 0;
+        font-size: 23px;
+       margin-top: -35px;
+  
+    }
+
+    .div1 .btn-orcamento{
+        margin-top: -35px;
+    }
+    
+    .div1 p{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+
+}
+
+
+@media (max-width: 320px) {
+
+    .div1{
+        height: 450px;
+        
+    }
+
+    .div1 h2{
+        padding: 0;
+        font-size: 19px;
+        margin-top: -40px;
+        padding: 0px;
+        width: 100%; /* Define a largura como 100% do contêiner pai */
+  
+    }
+
+    .div1 h4{
+
+        margin-bottom: -20px;
+    }
+
+    .div1 .btn-orcamento{
+        margin-top: -70px;
+    }
+    
+    .div1 p{
+        font-size: 15px;
+        margin-bottom: 10px;
+    
+    }
+
+    .textos1{
+        padding: 0px;
+       
     }
 }
