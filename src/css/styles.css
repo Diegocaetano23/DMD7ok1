@@ -399,20 +399,21 @@ body {
 
 .btn-orcamento {
     display: inline-block;
-    padding: 18px 30px;
-    background-color: #fcda45; /* Amarelo mostarda */
+    background-color: #FFA500;
     color: #ffffff; /* Letra branca */
     text-align: center;
     text-decoration: none;
-    border-radius: 25px; /* Bordas arredondadas */
     font-size: 19px;
     font-weight: bold;
     margin-top: 20px; /* Espaço acima do botão */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .btn-orcamento:hover {
-    background-color: #e69a2d; /* Cor mais escura ao passar o mouse */
+    background-color: #FF8C00; /* Cor mais escura ao passar o mouse */
 }
 
 /* FIM BOTÃO ORÇAMENTO*/
@@ -502,7 +503,7 @@ body {
 
 /* FIM WHO*/
 
-/* Estilo para a div contact */
+
 /* Estilo para a div contact */
 .contact {
     display: flex;
@@ -705,18 +706,7 @@ html {
     margin-bottom: 20px;
 }
 
-.btn-orcamento {
-    background-color: #FFA500;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
 
-.btn-orcamento:hover {
-    background-color: #FF8C00;
-}
 
 .half {
     display: flex;
@@ -837,10 +827,11 @@ html {
         background-repeat: no-repeat;
         background-position: center;
         height: 800px;
+        margin-top: -30px;
     }
 
     .logo img {
-        height: 80px;
+        height: 50px;
         margin-left: -15px;
     }
 
