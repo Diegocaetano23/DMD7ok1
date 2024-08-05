@@ -18,3 +18,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 });
+
+
+/*fade up*/
+
+document.addEventListener('DOMContentLoaded', function () {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    });
+
+    const targets = document.querySelectorAll('.fade-in-up');
+    targets.forEach(target => {
+        observer.observe(target);
+    });
+});
+
+
+/*fade up fim*/
